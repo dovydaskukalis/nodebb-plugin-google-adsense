@@ -1,0 +1,1 @@
+# NodeBB plugin to easily place ads on your forum in different areas. More details coming soon.

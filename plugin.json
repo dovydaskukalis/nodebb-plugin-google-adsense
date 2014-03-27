@@ -1,0 +1,18 @@
+{
+	"id": "nodebb-plugin-google-adsense",
+	"name": "Google adsense plugin for NodeBB",
+	"description": "Plugin to easily place ads on your forum in different areas",
+	"url": "https://github.com/dovydaskukalis/nodebb-plugin-google-adsense",
+	"library": "./library.js",
+	"templates": "./public/templates",
+	"hooks": [
+	{ "hook": "filter:admin.header.build", "method": "admin.menu"},
+	{ "hook": "action:app.load", "method": "admin.onLoad" },
+	{ "hook": "action:plugin.activate", "method": "admin.activate" },
+	{ "hook": "action:plugin.deactivate", "method": "admin.deactivate"},
+	{ "hook": "filter:header.build", "method": "addNavigation", "callbacked": false }
+	],
+	"scripts": [
+	"public/main.js"
+	]
+}

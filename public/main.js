@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 
 				if (url.url.substring(0, 6) == "topic/") {
-					if(data.first_post_active){
+					if(data.first_post_active == "on"){
 						switch(data.first_post_position){
 							case 'bottom':
 							$(".post-content").first().append(getInsCode(data.client_id, data.footer_id, '', 'margin:0 auto;', 'auto'));
@@ -26,11 +26,29 @@ $(document).ready(function(){
 							break;
 
 							case 'left':
-							$(".post-content").first().prepend(getInsCode(data.client_id, data.footer_id, 'pull-left', 'width:300px; height: 250px; margin-right:30px;', 'rectangle'));
+							var height = $(".post-content").first().height();
+							if(height < 250){
+								var type = "auto";
+								var width = 250;
+							}
+							else{
+								var width = 300;
+								var type ="vertical";
+							}
+							$(".post-content").first().prepend(getInsCode(data.client_id, data.footer_id, 'pull-left', 'width:' + width + 'px;  margin-right:30px;', type));
 							break;
 
 							case 'right':
-							$(".post-content").first().prepend(getInsCode(data.client_id, data.footer_id, 'pull-right', 'width:300px; height: 250px; margin-left:30px;', 'rectangle'));
+							var height = $(".post-content").first().height();
+							if(height < 250){
+								var type = "auto";
+								var width = 250;
+							}
+							else{
+								var width = 300;
+								var type ="vertical";
+							}
+							$(".post-content").first().prepend(getInsCode(data.client_id, data.footer_id, 'pull-right', 'width:' + width + 'px; margin-left:30px;', type));
 							break;
 
 							default:

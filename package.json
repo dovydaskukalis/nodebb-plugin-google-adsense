@@ -25,9 +25,9 @@
   "bugs": {
     "url": "https://github.com/dovydaskukalis/nodebb-plugin-google-adsense/issues"
   },
-  "readme": "# NodeBB plugin to easily place ads on your forum in different areas.",
-  "readmeFilename": "README.md",
-  "_id": "nodebb-plugin-google-adsense@0.0.1",
   "_from": "nodebb-plugin-google-adsense@",
-  "homepage": "https://github.com/dovydaskukalis/nodebb-plugin-google-adsense"
+  "homepage": "https://github.com/dovydaskukalis/nodebb-plugin-google-adsense",
+  "readme": "# NodeBB plugin to easily place ads on your forum in different areas. More details coming soon.",
+  "readmeFilename": "README.md",
+  "_id": "nodebb-plugin-google-adsense@0.0.1"
 }

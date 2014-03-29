@@ -4,7 +4,7 @@ NodeBB Google Adsense plugin is made to easily place ads on your forum in differ
 
 ## Installation
 
-    npm install nodebb-plugin-google-adsense
+npm install nodebb-plugin-google-adsense
 
 ## Using
 

@@ -28,7 +28,7 @@ $(document).ready(function(){
 							case 'left':
 							var height = $(".post-content").first().height();
 							if(height < 250){
-								var type = "auto";
+								var type = "rectangle";
 								var width = 250;
 							}
 							else{
@@ -41,7 +41,7 @@ $(document).ready(function(){
 							case 'right':
 							var height = $(".post-content").first().height();
 							if(height < 250){
-								var type = "auto";
+								var type = "rectangle";
 								var width = 250;
 							}
 							else{

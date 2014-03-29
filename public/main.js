@@ -1,5 +1,8 @@
 $(document).ready(function(){
-	$.getJSON("/google-adsense.config.json", function (data){
+	$.getScript("http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function (data){
+
+
+		$.getJSON("/google-adsense.config.json", function (data){
 			//If ad in header is enabled
 			if(data.header_active == "on"){
 				$(getInsCode(data.client_id, data.header_id, 'container', 'margin:0 auto;', 'auto')).insertBefore("#content");
@@ -58,8 +61,9 @@ $(document).ready(function(){
 					}
 				}
 			})
-			(adsbygoogle = window.adsbygoogle || []).push({});
-		})
+(adsbygoogle = window.adsbygoogle || []).push({});
+})
+})
 
 })
 

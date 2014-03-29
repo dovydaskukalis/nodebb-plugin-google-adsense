@@ -31,6 +31,10 @@ Adsense = {
 			})
 		});
 	},
+	addNavigation: function(custom_header, callback) {
+
+		return custom_header;
+	},
 
 	admin:{
 		menu: function(custom_header, callback) {

@@ -35,6 +35,10 @@
 				</div>
 			</div>
 		</div>
+		<div class="form-group">
+			<label for="after_first_post_id">After first post ad slot ID (<a href="https://www.google.com/adsense/app#myads-viewall-adunits" target="_blank" title="More information">?</a>)</label>
+			<input type="text" class="form-control" name="after_first_post_id" id="after_first_post_id" placeholder="xxxxxxxxxx">
+		</div>
 	</div>
 	<div class="col-sm-2">
 		<div class="form-group">
@@ -48,6 +52,10 @@
 		<div class="form-group">
 			<label for="first_post_active"></label>
 			<input type="checkbox" class="form-control" name="first_post_active" id="first_post_active">
+		</div>
+		<div class="form-group">
+			<label for="after_first_post_active"></label>
+			<input type="checkbox" class="form-control" name="after_first_post_active" id="after_first_post_active">
 		</div>
 	</div>
 </div>

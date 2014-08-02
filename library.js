@@ -8,17 +8,19 @@ Adsense = {
 	init: function() {
 		var	_self = this,
 		fields = [
-		'client_id', 'header_id', 'footer_id', 'first_post_id', 'first_post_position', 'header_active', 'footer_active', 'first_post_active'
+		'client_id', 'header_id', 'footer_id', 'first_post_id', 'after_first_post_id', 'first_post_position', 'header_active', 'footer_active', 'first_post_active', 'after_first_post_active'
 		],
 		defaults = {
 			'client_id': '',
 			'header_id': '',
 			'footer_id': '',
 			'first_post_id': '',
+			'after_first_post_id': '',
 			'first_post_position': 'bottom',
 			'header_active': false,
 			'footer_active': false,
-			'first_post_active': false
+			'first_post_active': false,
+			'after_first_post_active': false
 
 		};
 		meta.settings.get('google-adsense', function(err, options) {
@@ -56,11 +58,13 @@ Adsense = {
 				{ field: 'client_id', value: '' },
 				{ field: 'header_id', value: '' },
 				{ field: 'footer_id', value: '' },
+				{field: 'after_first_post_id', value: ''},
 				{ field: 'first_post_position', value: 'bottom' },
 				{ field: 'first_post_id', value: '' },
 				{ field: 'header_active', value: 'Off' },
 				{ field: 'footer_active', value: 'Off' },
-				{ field: 'first_post_active', value: 'Off' }
+				{ field: 'first_post_active', value: 'Off' },
+				{field: 'after_first_post_active', value: 'Off'}
 				];
 
 				async.each(defaults, function(optObj, next) {

@@ -44,13 +44,15 @@ Adsense = {
 
 			callback(null, custom_header);
 		},
-		onLoad: function(app, middleware, controllers) {
+		onLoad: function(params, callback) {
 			function render(req, res, next) {
 				res.render('admin/plugins/google-adsense', {});
 			}
-
-			app.get('/admin/plugins/google-adsense', middleware.admin.buildHeader, render);
-			app.get('/api/admin/plugins/google-adsense', render);
+            
+			params.router.get('/admin/plugins/google-adsense', params.middleware.admin.buildHeader, render);
+			params.router.get('/api/admin/plugins/google-adsense', render);
+            
+            callback();
 		},
 		activate: function(id) {
 			if (id === 'nodebb-plugin-google-adsense') {

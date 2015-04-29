@@ -2,7 +2,7 @@ var loaded = false;
 var relativePath=config.relative_path;
 
 $(window).on('action:ajaxify.end', function (e, url) {
-	$.getScript("http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function (data){
+	$.getScript("//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", function (data){
 		$.getJSON(relativePath + "/google-adsense.config.json", function (data){
 			//If ad in header is enabled
 			if(data.header_active == "on" && loaded == false){

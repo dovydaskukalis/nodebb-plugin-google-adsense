@@ -8,7 +8,7 @@ Adsense = {
 	init: function() {
 		var	_self = this,
 		fields = [
-		'client_id', 'header_id', 'footer_id', 'first_post_id', 'after_first_post_id', 'first_post_position', 'header_active', 'footer_active', 'first_post_active', 'after_first_post_active'
+		'client_id', 'header_id', 'footer_id', 'first_post_id', 'after_first_post_id', 'first_post_position'
 		],
 		defaults = {
 			'client_id': '',
@@ -16,11 +16,7 @@ Adsense = {
 			'footer_id': '',
 			'first_post_id': '',
 			'after_first_post_id': '',
-			'first_post_position': 'bottom',
-			'header_active': false,
-			'footer_active': false,
-			'first_post_active': false,
-			'after_first_post_active': false
+			'first_post_position': 'bottom'
 
 		};
 		meta.settings.get('google-adsense', function(err, options) {
@@ -34,6 +30,9 @@ Adsense = {
 		});
 	},
 
+	parse: function(data, callback){
+		console.log(data);
+	},
 	admin:{
 		menu: function(custom_header, callback) {
 			custom_header.plugins.push({
@@ -48,11 +47,11 @@ Adsense = {
 			function render(req, res, next) {
 				res.render('admin/plugins/google-adsense', {});
 			}
-            
+
 			params.router.get('/admin/plugins/google-adsense', params.middleware.admin.buildHeader, render);
 			params.router.get('/api/admin/plugins/google-adsense', render);
-            
-            callback();
+
+			callback();
 		},
 		activate: function(id) {
 			if (id === 'nodebb-plugin-google-adsense') {
@@ -62,11 +61,7 @@ Adsense = {
 				{ field: 'footer_id', value: '' },
 				{field: 'after_first_post_id', value: ''},
 				{ field: 'first_post_position', value: 'bottom' },
-				{ field: 'first_post_id', value: '' },
-				{ field: 'header_active', value: 'Off' },
-				{ field: 'footer_active', value: 'Off' },
-				{ field: 'first_post_active', value: 'Off' },
-				{field: 'after_first_post_active', value: 'Off'}
+				{ field: 'first_post_id', value: '' }
 				];
 
 				async.each(defaults, function(optObj, next) {
@@ -84,9 +79,5 @@ Adsense = {
 	}
 };
 
-function getInsCode(clientId, dataId){
-	var ad = '<ins class="adsbygoogle" style="display:block; margin:0 auto; margin-bottom:15px; " data-ad-client="' + clientId + '" data-ad-slot="' + dataId + '" data-ad-format="auto"></ins>';
-	return ad;
-}
 Adsense.init();
 module.exports = Adsense;

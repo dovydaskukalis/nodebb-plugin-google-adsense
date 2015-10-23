@@ -7,6 +7,7 @@ npm install nodebb-plugin-google-adsense
 
 ## Using custom template?
 The plugin is made for a default NodeBB theme Persona. If you have a custom theme and want to display ads, make sure you have these classes in your page:
+
 1. .posts li - for displaying the ad after first post.
 2. .posts li .content - displaying the ad inside a post.
 3. #content - ad on the header, before a content.

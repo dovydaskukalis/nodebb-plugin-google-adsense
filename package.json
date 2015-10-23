@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-google-adsense",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Plugin to easily place ads on your forum in different areas",
   "main": "library.js",
   "repository": {
@@ -25,11 +25,36 @@
   "nbbpm": {
 	"compatibility": "^0.7.0"
   },
-  "readme": "# NodeBB Google Adsense Plugin\n\nNodeBB Google Adsense plugin is made to easily place ads on your forum in different areas.\n\n## Installation\n\nnpm install nodebb-plugin-google-adsense\n\n## Using\n\n1. After activating plugin, you will see a reference in admin panel left menu called \"Google Adsense\". Here you will need to enter your unique publisher ID (pub-xxxxxxxxxxxxxxxx). You can find your ID by following instructions here: https://support.google.com/adsense/answer/105516?hl=en ;\n2. Create new ad campaign on your Adsense account page. It is **recommended** to select \"Responsive ad unit (BETA)\" Ad size;\n3. Then on this page https://www.google.com/adsense/app#myads-viewall-adunits you will see ID of your created campaign. Simply copy this number to any of available ad slots in plugin's settings page and click the checkbox to enable it;\n4. That's all. I am sure your users will be happy to see ads ;)\n\n\n## Screenshots\n\n![Example screenshot](http://i.imgur.com/fK6w7u8.png)",
+  "readme": "# NodeBB Google Adsense Plugin
+
+			NodeBB Google Adsense plugin is made to easily place ads on your forum in different areas.
+
+			## Installation
+
+			npm install nodebb-plugin-google-adsense
+
+			## Using custom template?
+			The plugin is made for a default NodeBB theme Persona. If you have a custom theme and want to display ads, make sure you have these classes in your page:
+			1. .posts li - for displaying the ad after first post.
+			2. .posts li .content - displaying the ad inside a post.
+			3. #content - ad on the header, before a content.
+			4. #footer - ad in the footer.
+
+			## Using
+
+			1. After activating plugin, you will see a reference in admin panel left menu called \"Google Adsense\". Here you will need to enter your unique publisher ID (pub-xxxxxxxxxxxxxxxx). You can find your ID by following instructions here: https://support.google.com/adsense/answer/105516?hl=en ;
+			2. Create new ad campaign on your Adsense account page. It is **recommended** to select \"Responsive ad unit\" ad;
+			3. Then on this page https://www.google.com/adsense/app#myads-viewall-adunits you will see ID of your created campaign. Simply copy this number to any of available ad slots in plugin's settings page to enable it;
+			4. That's all. I am sure your users will be happy to see ads ;)
+
+
+			## Screenshots
+
+			![Example screenshot](http://i.imgur.com/EnHBuVR.png)",
   "readmeFilename": "README.md",
   "gitHead": "29458fd32c922debda109277839d23ae5c9f7e4b",
   "homepage": "https://github.com/dovydaskukalis/nodebb-plugin-google-adsense",
-  "_id": "nodebb-plugin-google-adsense@0.0.10",
+  "_id": "nodebb-plugin-google-adsense@0.0.11",
   "scripts": {},
   "_shasum": "91b6449e78557435b4881d9456f6b3a073663c9c",
   "_from": "nodebb-plugin-google-adsense@"

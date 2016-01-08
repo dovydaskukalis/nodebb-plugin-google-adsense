@@ -68,7 +68,15 @@ require(['settings'], function(Settings) {
 
 	$('#save').on('click', function() {
 		Settings.save('google-adsense', $('.google-adsense-settings'), function() {
-			socket.emit('admin.restart');
+			app.alert({
+				type: 'success',
+				alert_id: 'google-adsense-saved',
+				title: 'Settings Saved',
+				message: 'Please restart your NodeBB to apply these settings',
+				clickfn: function() {
+					socket.emit('admin.restart');
+				}
+			})
 		});
 		return false;
 	});

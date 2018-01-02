@@ -71,11 +71,8 @@ require(['settings'], function(Settings) {
 			app.alert({
 				type: 'success',
 				alert_id: 'google-adsense-saved',
-				title: 'Settings Saved',
-				message: 'Please restart your NodeBB to apply these settings',
-				clickfn: function() {
-					socket.emit('admin.restart');
-				}
+				title: '',
+				message: 'Settings Saved',
 			})
 		});
 		return false;

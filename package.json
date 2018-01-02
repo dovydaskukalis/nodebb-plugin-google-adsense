@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-google-adsense",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Plugin to easily place ads on your forum in different areas",
   "main": "library.js",
   "repository": {
@@ -23,12 +23,12 @@
 	"url": "https://github.com/dovydaskukalis/nodebb-plugin-google-adsense/issues"
   },
   "nbbpm": {
-	"compatibility": "^0.7.0"
+	"compatibility": "^0.7.0 || ^0.8.0 || ^0.9.0"
   },
   "readmeFilename": "README.md",
   "gitHead": "29458fd32c922debda109277839d23ae5c9f7e4b",
   "homepage": "https://github.com/dovydaskukalis/nodebb-plugin-google-adsense",
-  "_id": "nodebb-plugin-google-adsense@0.0.11",
+  "_id": "nodebb-plugin-google-adsense@0.0.12",
   "scripts": {},
   "_shasum": "91b6449e78557435b4881d9456f6b3a073663c9c",
   "_from": "nodebb-plugin-google-adsense@"

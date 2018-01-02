@@ -72,6 +72,6 @@ $(window).on('action:ajaxify.end', function (e, url) {
 
 
 function getInsCode(clientId, dataId, customClass, style, format){
-	var ad = '<ins class="adsbygoogle ' + customClass + '" style="display:block; margin-bottom:15px;' + style + ' " data-ad-format="' + format + '" data-ad-client="ca-' + clientId + '" data-ad-slot="' + dataId + '"></ins>';
+	var ad = '<div class="adsensewrapper" style="text-align:center;"><ins class="adsbygoogle ' + customClass + '" style="display:block; margin-bottom:15px;' + style + ' " data-ad-format="' + format + '" data-ad-client="ca-' + clientId + '" data-ad-slot="' + dataId + '"></ins></div>';
 	return ad;
 }

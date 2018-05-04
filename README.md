@@ -1,3 +1,5 @@
+# NOTE: THIS REPO IS NO LONGER MAINTAINED BUT IF YOU MAKE A PULL REQUEST FOR A NEW FEATURE/FIX I WILL MERGE IT. THANKS
+
 # NodeBB Google Adsense Plugin
 NodeBB Google Adsense plugin is made to easily place ads on your forum in different areas.
 
